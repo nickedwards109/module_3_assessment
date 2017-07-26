@@ -5,12 +5,22 @@
 <div class="search-results">
   <% store_reference_id = 0 %>
   <% @stores.each do |store| %>
-      <div class="store">
-        Name: <%= store.name %><br>
-        City: <%= store.city %><br>
-        Distance: <%= store.distance %><br>
-        Phone: <%= store.phone %><br>
-        Store Type: <%= store.store_type %><br>
+      <div class="store store-<%= store_reference_id %>">
+        <div class="long-name">
+          Name: <%= store.name %><br>
+        </div>
+        <div class="city">
+          City: <%= store.city %><br>
+        </div>
+        <div class="distance">
+          Distance: <%= store.distance %><br>
+        </div>
+        <div class="phone-number">
+          Phone: <%= store.phone %><br>
+        </div>
+        <div class="store-type">
+          Store Type: <%= store.store_type %><br>
+        </div>
       </div>
     <% store_reference_id += 1 %>
     <br>

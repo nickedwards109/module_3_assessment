@@ -3,7 +3,7 @@ require "rails_helper"
 feature "Locating Best Buy Stores" do
   it "shows stores within a 25 mile radius of a specified location" do
     visit "/"
-    fill_in ".search-box", with: "80202"
+    fill_in "Postal Code", with: "80202"
     click_on "search"
     expect(current_path).to eq("/search")
     expect(page).to have_content("17 Total Stores")
