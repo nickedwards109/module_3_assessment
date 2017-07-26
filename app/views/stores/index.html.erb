@@ -1,0 +1,15 @@
+<%= @stores_count %> Total Stores
+
+<div class="search-results">
+  <% store_reference_id = 0 %>
+  <% @stores.each do |store| %>
+      <div class="store">
+        Name: <%= store[:longName] %>
+        City: <%= store[:city] %>
+        Distance: <%= store[:distance] %>
+        Phone: <%= store[:phone] %>
+        Store Type: <%= store[:storeType] %>
+      </div>
+    <% store_reference_id += 1 %>
+  <% end %>
+</div>
